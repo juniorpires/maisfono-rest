@@ -13,7 +13,7 @@ before_install:
 - chmod 600 ./deploy_key
 - echo -e "Host 108.167.188.84\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - ssh-add ./deploy_key
-- scp -i -r ./deploy_key -P 2222 ./* jrpiresc@108.167.188.84:~/public_html/maisfono_rest
+- scp -i ./deploy_key -P 2222 -r ./* jrpiresc@108.167.188.84:~/public_html/maisfono_rest
 
 install:
   - compose install
