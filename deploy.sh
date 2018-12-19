@@ -11,10 +11,10 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 ls -la
-ssh -i ./deploy_key -p 2222 jrpiresc@108.167.188.84
+#ssh -i ./deploy_key jrpiresc@108.167.188.84
 #ssh -p 2222 jrpiresc@108.167.188.84
 
-scp . jrpiresc@108.167.188.84:~/public_html/maisfono_rest
+#scp . jrpiresc@108.167.188.84:~/public_html/maisfono_rest
 # Forçando o push do master para a branch gh-pages (Toda história anterior da branch
 # gh-pages será perdido, pois vamos substituí-lo.)  Redirecionamos qualquer saída para
 # /dev/null para ocultar quaisquer dados de credenciais sensíveis que de outra forma possam ser expostos.
