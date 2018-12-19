@@ -21,5 +21,4 @@ before_install:
 - scp -i ./deploy_key -P 2222 -r ./* jrpiresc@108.167.188.84:~/public_html/maisfono_rest
 
 install:
-  - cd ~/public_html/maisfono_rest
   - composer install 
