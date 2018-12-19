@@ -20,7 +20,6 @@ session_start();
 // Instantiate the app
 $settings = require __DIR__ . '/../src/settings.php';
 $app = new \Slim\App($settings);
-$app->config('debug', true);
 
 // Set up dependencies
 require __DIR__ . '/../src/dependencies.php';
@@ -191,15 +190,17 @@ function getPacientes($response) {
 |______________________________________________________*/
 
 function getConnection() {
-    // $dbhost="127.0.0.1";
-    // $dbuser="root";
-    // $dbpass="";
-    // $dbname="db_maisfono";
+    //  $dbhost="127.0.0.1";
+    //  $dbuser="root";
+    //  $dbpass="";
+    //  $dbname="db_maisfono";
 
-    $dbhost="jrpires.com";
-    $dbuser="jrpiresc_ifpe";
-    $dbpass="maisfono_0001";
-    $dbname="jrpiresc_maisfono_rest";
+     $dbhost="jrpires.com";
+     $dbuser="jrpiresc_ifpe";
+     $dbpass="maisfono_0001";
+     $dbname="jrpiresc_maisfono_rest";
+
+
     $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $dbh;
