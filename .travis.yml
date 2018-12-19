@@ -1,13 +1,10 @@
 language: php
 php:
-  - 7.1
-
-# Commands to be run before your environment runs.
-#before_script:
- # - composer self-update
- # - composer install --prefer-source --no-interaction --dev
-
+- 7.1
 script:
-  - bash ./deploy.sh
-on:
+- bash ./deploy.sh
+true:
   branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_ae70f514faa2_key -iv $encrypted_ae70f514faa2_iv
+  -in deploy_key.enc -out ./deploy_key -d
