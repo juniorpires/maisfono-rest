@@ -10,7 +10,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     echo "Skipping deploy."
     exit 0
 fi
-apt-get install sshpass
+sudo apt-get install sshpass
 
 sshpass -p "${SSH_KEY}" ssh -o StrictHostKeyChecking=no jrpiresc@108.167.188.84
 #ssh -p 2222 jrpiresc@108.167.188.84
